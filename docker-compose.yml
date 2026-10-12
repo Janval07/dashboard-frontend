@@ -1,0 +1,9 @@
+services:
+  dashboard-frontend:
+    build: .
+    container_name: dashboard-frontend
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    ports:
+      - "8090:80"

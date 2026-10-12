@@ -7,7 +7,6 @@ http.interceptors.request.use((config) => {
   const auth = useAuthStore()
   if (auth.token) {
     config.headers.Authorization = `Bearer ${auth.token}`
-    console.log('JWT en request:', config.method?.toUpperCase(), config.url, auth.token)
   }
   return config
 })
